@@ -10,7 +10,7 @@
 
     <a-scene>
       <a-entity id="rig" movement-controls position="0 0.5 0">
-        <a-entity id="cam" camera position="0 1.6 0" look-controls>
+        <a-entity id="cam" camera rotation="0 0 0" position="0 1.6 0" look-controls>
           <a-entity cursor="fuse: true; fuseTimeout: 50" position="0 0 0" geometry="primitive: ring; radiusInner: 0.0; radiusOuter: 0.0" material="color: white; shader: flat"></a-entity>
         </a-entity>
         <a-entity laser-controls="hand: right" defaultModelColor="white"></a-entity>
@@ -23,7 +23,7 @@
 
           <a-entity light="type: point; castShadow:true; color: #FFF; distance: 20; intensity: 0.2" position="0 6 0"></a-entity>
 
-                <a-box position="-10 4 2" scale="20 8 0.4" rotation="0 90 0" color="#efefef" shadow="cast: true"></a-box>
+                <a-box position="-10 4 0" scale="20 8 0.4" rotation="0 90 0" color="#efefef" shadow="cast: true"></a-box>
                 <a-box position="0 4 -10" scale="20 8 0.4" rotation="0 0 0" color="#efefef" shadow="cast: true"></a-box>
                 <a-box position="10 4 0" scale="20 8 0.4" rotation="0 90 0" color="#efefef" shadow="cast: true"></a-box>
                 <a-box position="0 4 10" scale="20 8 0.4" rotation="0 0 0" color="#efefef" shadow="cast: true"></a-box>
