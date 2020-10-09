@@ -10,6 +10,23 @@
   <body>
 
     <a-scene>
+
+      <a-assets>
+        <img id="concrete_color" src="textures/concrete/Concrete_COLOR.jpg">
+        <img id="concrete_norm" src="textures/concrete/Concrete_NORM.jpg">
+        <img id="concrete_occ" src="textures/concrete/Concrete_OCC.jpg">
+        <img id="concrete_disp" src="textures/concrete/Concrete_DISP.png">
+
+        <a-asset-item id="toilet-obj" src="models/toilet/toilet.obj"></a-asset-item>
+        <a-asset-item id="toilet-mtl" src="models/toilet/toilet.mtl"></a-asset-item>
+
+        <a-asset-item id="jess-obj" src="models/jess/jess.obj"></a-asset-item>
+        <img id="jess_color" src="models/jess/Jess_D.png">
+        <img id="jess_norm" src="models/jess/Jess_N.png">
+        <img id="jess_occ" src="models/jess/Jess_G.jpg">
+      </a-assets>
+
+
       <a-entity id="rig" movement-controls position="0 0.5 0">
         <a-entity id="cam" camera rotation="0 0 0" position="0 1.6 0" look-controls>
           <a-entity cursor="fuse: true; fuseTimeout: 50" position="0 0 0" geometry="primitive: ring; radiusInner: 0.0; radiusOuter: 0.0" material="color: white; shader: flat"></a-entity>
@@ -17,23 +34,20 @@
         <a-entity laser-controls="hand: right" defaultModelColor="white"></a-entity>
       </a-entity>
 
+
+
       <a-entity light="type: ambient; color: #FFF; intensity: 0.95"></a-entity>
 
 
-      <a-entity class="room">
 
-          <a-entity light="type: point; castShadow:true; color: #FFF; distance: 20; intensity: 0.2" position="0 6 0"></a-entity>
+      <a-entity light="type: point; castShadow:true; color: #FFF; distance: 20; intensity: 0.2" position="0 6 0"></a-entity>
 
-                <a-box position="-4 4 -16" scale="40 8 0.4" rotation="0 90 0" color="#efefef" shadow="cast: true"></a-box>
-                <a-box position="4 4 -16" scale="40 8 0.4" rotation="0 90 0" color="#efefef" shadow="cast: true"></a-box>
-                <a-box position="0 4 4" scale="8 8 0.4" rotation="0 0 0" color="#efefef" shadow="cast: true"></a-box>
-                <a-box position="0 -0.25 -17" scale="8 0.5 42" rotation="0 0 0" color="#dadada" shadow="cast: true"></a-box>
-                <a-box position="0 8.25 -16" scale="8 0.5 40" rotation="0 0 0" color="#dadada" shadow="cast: true"></a-box>
-
-                <a-box position="0 4 -80" scale="16 16 0.4" rotation="0 0 0" color="#004c77" shadow="cast: true"></a-box>
-                <a-box position="0 -0.75 -50" scale="30 0.5 30" rotation="0 0 0" color="#004c77" shadow="cast: true"></a-box>
-
-          </a-entity>
+      <a-box position="-10 4 2" scale="16 8 0.4" rotation="0 90 0" color="#efefef" shadow="cast: true"></a-box>
+      <a-box position="0 4 -10" scale="20 8 0.4" rotation="0 0 0" color="#efefef" shadow="cast: true"></a-box>
+      <a-box position="10 4 0" scale="20 8 0.4" rotation="0 90 0" color="#efefef" shadow="cast: true"></a-box>
+      <a-box position="0 4 10" scale="20 8 0.4" rotation="0 0 0" color="#efefef" shadow="cast: true"></a-box>
+      <a-plane position="0 0 0" height="20" width="20" rotation="-90 0 0" shadow="receive: true" material="color: #dedede"></a-plane>
+      <a-plane color="#ffffff" position="0 8 0" height="20" width="20" rotation="90 0 0" material="color: #efefef" shadow="receive: true"></a-plane>
 
     </a-scene>
   </body>

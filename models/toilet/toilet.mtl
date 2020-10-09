@@ -1,0 +1,47 @@
+# Blender MTL File: 'toilet free.blend'
+# Material Count: 4
+
+newmtl ceramic
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Darton\\Documents\\Allegorithmic\\Substance Painter\\export\\toilet free\\lowpoly_ceramic_BaseColor.png
+map_Ns C:\\Users\\Darton\\Documents\\Allegorithmic\\Substance Painter\\export\\toilet free\\lowpoly_ceramic_Roughness.png
+
+newmtl iron_smooth
+Ns 537.396706
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.651362 0.393412
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 3
+map_Ns C:\\Users\\Darton\\Documents\\Allegorithmic\\Substance Painter\\export\\toilet free\\lowpoly_iron smooth_Roughness.png
+
+newmtl plastic_cover
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Darton\\Documents\\Allegorithmic\\Substance Painter\\export\\toilet free\\lowpoly_plastic_cover_BaseColor.png
+map_Ns C:\\Users\\Darton\\Documents\\Allegorithmic\\Substance Painter\\export\\toilet free\\lowpoly_plastic_cover_Roughness.png
+
+newmtl wireframe
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.003095 0.003095 0.003095
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
