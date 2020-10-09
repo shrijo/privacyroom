@@ -11,8 +11,8 @@ Ni 1.000000
 d 1.000000
 illum 2
 map_Kd textures\Lowpolay_Laptop_col.JPG
-map_Bump  textures\\Lowpolay_Laptop_nor.JPG
-refl  textures\\Ref.jpg
+map_Bump  textures\Lowpolay_Laptop_nor.JPG
+refl  textures\Ref.jpg
 
 newmtl Lowpoly_Screen
 Ns 96.078431
@@ -24,5 +24,5 @@ Ni 1.000000
 d 1.000000
 illum 2
 map_Kd textures\Lowpolay_Laptop_nor_2.JPG
-map_Bump  textures\\Lowpolay_Laptop_nor_2.JPG
-refl  textures\\Ref.jpg
+map_Bump  textures\Lowpolay_Laptop_nor_2.JPG
+refl  textures\Ref.jpg
