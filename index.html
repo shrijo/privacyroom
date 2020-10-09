@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Privacy Room</title>
     <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
   </head>
@@ -32,7 +32,7 @@
 
 
       <a-entity id="rig" movement-controls position="-7 0.5 7">
-        <a-entity id="cam" camera rotation="0 0 0" position="0 1.6 0" look-controls>
+        <a-entity id="cam" camera rotation="0 0 0" position="0 0 0" look-controls>
           <a-entity cursor="fuse: true; fuseTimeout: 50" position="0 0 0" geometry="primitive: ring; radiusInner: 0.0; radiusOuter: 0.0" material="color: white; shader: flat"></a-entity>
         </a-entity>
         <a-entity laser-controls="hand: right" defaultModelColor="white"></a-entity>
