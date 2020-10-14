@@ -1,0 +1,62 @@
+{
+  "id": 4492,
+  "name": "Fork of Fork of sun",
+  "fragment": "#define PI 3.14159265\n\nprecision highp float;\nprecision highp int;\nuniform float time;\nuniform float speed;\nuniform vec3 veinColor;\nuniform float veinBrightness;\nuniform vec3 color;\nuniform vec2 resolution;\nuniform sampler2D randomTexture;\nvarying vec2 vUv;\nvec3 saturate(vec3 i) \n                                        {\n                                            return clamp(i, 0.0, 1.0);\n                                        }\nfloat saturate(float i) \n                                        {\n                                            return clamp(i, 0.0, 1.0);\n                                        }\nvec4 texture2DNearest(sampler2D _tex, vec2 _uv, vec2 _reso) \n                                        {\n                                            return texture2D(_tex, (floor(_uv * _reso) + 0.5) / _reso);\n                                        }\nfloat expCurve(float _in, float _lv) \n                                        {\n                                            return sign(0.5 - _in) * (exp(-abs(_in - 0.5) * _lv) - 1.0) * 0.5 + 0.5;\n                                        }\nvec4 noise(vec2 _uv, vec2 _mul, vec2 _off, float _iter, float _lacu) \n                                        {\n                                            vec4 sum = vec4(0.0);\n                                            for (float i = 0.0;\n i < 99.0; i += 1.0) \n                                            {\n                                                vec2 uv0 = ((_uv) * _mul + _off) * 0.01 * exp(i * _lacu) + time * speed * i * 0.01;\n                                                vec2 uv1 = ((_uv + vec2(1.0, 0.0)) * _mul + _off) * 0.01 * exp(i * _lacu) + time * speed * i * 0.01;\n                                                vec4 tex0 = texture2D(randomTexture, uv0);\n                                                vec4 tex1 = texture2D(randomTexture, uv1);\n                                                vec4 tex = mix(tex1, tex0, expCurve(_uv.x, 10.0));\n                                                sum += tex / pow(2.0, i + 1.0);\n                                                if (_iter < i) \n                                                {\n                                                    break;\n                                                }\n                                             }\n                                            return sum;\n                                        }\nvec4 Veins_Floaters1556802717850_381_main() \n                                        {\n                                            vec4 Veins_Floaters1556802717850_381_gl_FragColor = vec4(0.0);\n                                            vec2 uv = mod(vUv.xy / resolution, 1.0);\n                                            uv = mod(uv + vec2(0.5, 0.0), 1.0);\n                                            vec3 col1 = vec3(0.0);\n                                            float line = 0.0;\n                                            for (float i = 0.0;\n i < 8.5; i += 1.0) \n                                            {\n                                                vec2 mul = vec2(exp(i * 0.3));\n                                                vec2 off = vec2(i * 423.1);\n                                                float lineL = 1.0 - abs(noise(uv, mul * vec2(2.0, 1.5), off, 2.0, 0.4).x - 0.5) * 2.0;\n                                                float lineS = 1.0 - abs(noise(uv, mul * vec2(14.0), off + 10.0, 6.0, 0.7).x - 0.5) * 2.0;\n                                                float lineT = expCurve(pow(lineL, 200.0), 7.0) * 1.0;\n                                                lineT += pow(lineL, 12.0) * expCurve(pow(lineS, 40.0), 10.0) * 1.0;\n                                                lineT = saturate(lineT);\n                                                lineT *= expCurve(noise(uv, mul * 7.0, off + 20.0, 6.0, 1.0).x * 0.88, 20.0);\n                                                line += lineT * exp(-i * 0.1);\n                                            }\n                                            line = saturate(line);\n                                            col1 = vec3(0.5) * color;\n                                            col1 = mix(col1, color * 0.8, expCurve(noise(uv, vec2(4.0), vec2(40.0), 5.0, 0.7).x * 0.7, 14.0));\n                                            col1 = mix(col1, color * 0.8, expCurve(noise(uv, vec2(4.0), vec2(50.0), 5.0, 0.7).x * 0.7, 5.0) * 0.7);\n                                            col1 = mix(col1, veinColor * veinBrightness, line);\n                                            vec3 col = col1;\n                                            Veins_Floaters1556802717850_381_gl_FragColor = vec4(col, 1.0);\n                                            return Veins_Floaters1556802717850_381_gl_FragColor *= 1.0;\n                                        }\nvoid main() \n                                        {\n                                            gl_FragColor = Veins_Floaters1556802717850_381_main();                                        }\n",
+  "vertex": "precision highp float;\nprecision highp int;\nuniform mat4 modelMatrix;\nuniform mat4 modelViewMatrix;\nuniform mat4 projectionMatrix;\nuniform mat4 viewMatrix;\nuniform mat3 normalMatrix;\nuniform vec3 cameraPosition;\nuniform float time;\nattribute vec3 position;\nattribute vec3 normal;\nattribute vec2 uv;\nattribute vec2 uv2;\nvarying vec3 vPosition;\nvarying vec3 vNormal;\nvarying vec2 vUv;\nvarying vec2 vUv2;\nvec4 Veins_Floaters1556802717850_381_main() \n                                        {\n                                            vec4 Veins_Floaters1556802717850_381_gl_Position = vec4(0.0);\n                                            vNormal = normal;\n                                            vUv = uv;\n                                            vUv2 = uv2;\n                                            vPosition = position;\n                                            Veins_Floaters1556802717850_381_gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n                                            return Veins_Floaters1556802717850_381_gl_Position *= 1.0;\n                                        }\nvoid main() \n                                        {\n                                            gl_Position = Veins_Floaters1556802717850_381_main();                                        }\n",
+  "uniforms": {
+    "cameraPosition": {
+      "type": "v3",
+      "glslType": "vec3"
+    },
+    "time": {
+      "type": "f",
+      "glslType": "float"
+    },
+    "speed": {
+      "value": "0.05",
+      "type": "f",
+      "glslType": "float"
+    },
+    "resolution": {
+      "value": {
+        "x": "1",
+        "y": "1"
+      },
+      "type": "v2",
+      "glslType": "vec2"
+    },
+    "veinColor": {
+      "value": {
+        "r": 1,
+        "g": 0.8509803921568627,
+        "b": 0.8196078431372549
+      },
+      "type": "c",
+      "glslType": "vec3"
+    },
+    "randomTexture": {
+      "value": null,
+      "type": "t",
+      "glslType": "sampler2D"
+    },
+    "color": {
+      "value": {
+        "r": 1,
+        "g": 0.8666666666666667,
+        "b": 0.2
+      },
+      "type": "c",
+      "glslType": "vec3"
+    },
+    "veinBrightness": {
+      "value": "6",
+      "type": "f",
+      "glslType": "float"
+    }
+  },
+  "url": "http://shaderfrog.com/app/view/4492",
+  "user": {
+    "username": "jcastellano92",
+    "url": "http://shaderfrog.com/app/profile/andrewray"
+  }
+}
