@@ -1,5 +1,5 @@
 AFRAME.registerComponent('stepper-listener', {
-  init: function () {
+  update: function () {
     console.log("hello");
   }
 });
