@@ -20,7 +20,7 @@ AFRAME.registerComponent('stepper-listener', {
     var distance = Math.sqrt( dx * dx + dy * dy );
 
     if (distance < 0.5) {
-      alert('stepped on');
+      this.el.emit('hover');
     }
 
     //console.log(distance);
