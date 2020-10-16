@@ -1,12 +1,16 @@
 AFRAME.registerComponent('stepper-listener', {
 
+  init: function () {
+    var isOn = false;
+  },
+
   tick: function () {
 
     var cam = document.querySelector("#cam");
     var positionPlayer = new THREE.Vector3();
     var positionSelf = new THREE.Vector3();
     var distance;
-    var isOn;
+
 
 
 
@@ -18,7 +22,7 @@ AFRAME.registerComponent('stepper-listener', {
 
     var distance = Math.sqrt( dx * dx + dy * dy );
 
-    if (distance < 0.5 && isOn!=true) {
+    if (distance < 0.5 && isOn==false) {
       isOn = true;
       this.el.emit('hover');
       console.log(isOn);
