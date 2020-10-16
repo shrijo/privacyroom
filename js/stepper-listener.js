@@ -23,6 +23,7 @@ AFRAME.registerComponent('stepper-listener', {
     if (distance < 0.5 && isOn==false) {
       var isOn = true;
       this.el.emit('hover');
+      console.log(isOn);
     }
 
     if (distance >= 0.5 && isOn=true) {
@@ -30,6 +31,6 @@ AFRAME.registerComponent('stepper-listener', {
       this.el.emit('leave');
     }
 
-    //console.log(distance);
+    console.log(distance);
   }
 });
