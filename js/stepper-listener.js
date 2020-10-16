@@ -19,7 +19,10 @@ AFRAME.registerComponent('stepper-listener', {
 
     var distance = Math.sqrt( dx * dx + dy * dy );
 
-  //  console.log("hello");
-    console.log(distance);
+    if (distance < 0.5) {
+      alert('stepped on');
+    }
+
+    //console.log(distance);
   }
 });
