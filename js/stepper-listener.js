@@ -25,7 +25,7 @@ AFRAME.registerComponent('stepper-listener', {
       console.log(isOn);
     }
 
-    if (distance >= 0.5 && element.classList.contains(isOn);) {
+    if (distance >= 0.5 && element.classList.contains(isOn)) {
       this.classList.remove("isOn");
       this.classList.ad("isOff");
       this.el.emit('leave');
