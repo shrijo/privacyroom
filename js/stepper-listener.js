@@ -13,9 +13,16 @@ AFRAME.registerComponent('stepper-listener', {
     cam.object3D.getWorldPosition(positionPlayer);
     this.el.object3D.getWorldPosition(positionSelf);
 
-    var distance = positionSelf.distanceTo( positionPlayer );
+
+    function distanceVector( positionPlayer, positionSelf )
+    {
+        var dx = v1.x - v2.x;
+        var dy = v1.y - v2.y;
+
+        return Math.sqrt( dx * dx + dy * dy );
+    }
 
   //  console.log("hello");
-    console.log(distance);
+    console.log(distanceVector);
   }
 });
