@@ -7,7 +7,7 @@ AFRAME.registerComponent('stepper-listener', {
     var cam = document.querySelector("#cam");
     var positionPlayer = new THREE.Vector3();
     var positionSelf = new THREE.Vector3();
-    var ison
+    var isOn
     var distance
 
 
