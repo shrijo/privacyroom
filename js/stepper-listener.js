@@ -15,7 +15,7 @@ AFRAME.registerComponent('stepper-listener', {
     this.el.object3D.getWorldPosition(positionSelf);
 
     var dx = positionPlayer.x - positionSelf.x;
-    var dy = positionPlayer.y - positionSelf.y;
+    var dy = positionPlayer.z - positionSelf.z;
 
     var distance = Math.sqrt( dx * dx + dy * dy );
 
