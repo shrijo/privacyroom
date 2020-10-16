@@ -7,6 +7,6 @@ AFRAME.registerComponent('stepper-listener', {
     var cam = document.querySelector("#cam");
 
   //  console.log("hello");
-    console.log(cam.el.object3D.getWorldPosition(position));
+    console.log(cam.getWorldPosition(position));
   }
 });
