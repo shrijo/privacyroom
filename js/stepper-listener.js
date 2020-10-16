@@ -8,6 +8,6 @@ AFRAME.registerComponent('stepper-listener', {
     var position = new THREE.Vector3();
 
   //  console.log("hello");
-    console.log(cam.object3D.getWorldPosition(position));
+    console.log(this.el.distanceTo(cam.object3D.getWorldPosition(position)));
   }
 });
