@@ -29,7 +29,5 @@ AFRAME.registerComponent('stepper-listener', {
       this.el.emit('leave');
       console.log(isOn);
     }
-
-    console.log(isOn);
   }
 });
