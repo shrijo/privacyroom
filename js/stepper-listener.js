@@ -1,9 +1,5 @@
 AFRAME.registerComponent('stepper-listener', {
 
-  init: function () {
-    this.isOn = false;
-  },
-
   tick: function () {
 
     var cam = document.querySelector("#cam");
@@ -22,14 +18,16 @@ AFRAME.registerComponent('stepper-listener', {
 
     var distance = Math.sqrt( dx * dx + dy * dy );
 
-    if (distance < 0.5 && this.isOn==false) {
-      this.isOn = true;
+    if (distance < 0.5 && this.classList.contains(isOff);) {
+      this.classList.remove("isOff")
+      this.classList.add("isOn")
       this.el.emit('hover');
       console.log(isOn);
     }
 
-    if (distance >= 0.5 && this.isOn==true) {
-      this.isOn = false;
+    if (distance >= 0.5 && element.classList.contains(isOn);) {
+      this.classList.remove("isOn")
+      this.classList.ad("isOff")
       this.el.emit('leave');
       console.log(isOn);
     }
