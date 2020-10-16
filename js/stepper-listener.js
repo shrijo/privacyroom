@@ -1,7 +1,7 @@
 AFRAME.registerComponent('stepper-listener', {
 
   init: function () {
-    var isOn = false;
+    this.isOn = false;
   },
 
   tick: function () {
