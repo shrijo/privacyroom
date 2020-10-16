@@ -16,8 +16,8 @@ AFRAME.registerComponent('stepper-listener', {
 
     function distanceVector( positionPlayer, positionSelf )
     {
-        var dx = v1.x - v2.x;
-        var dy = v1.y - v2.y;
+        var dx = positionPlayer.x - positionSelf.x;
+        var dy = positionPlayer.y - positionSelf.y;
 
         return Math.sqrt( dx * dx + dy * dy );
     }
