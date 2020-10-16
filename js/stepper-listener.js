@@ -18,7 +18,7 @@ AFRAME.registerComponent('stepper-listener', {
 
     var distance = Math.sqrt( dx * dx + dy * dy );
 
-    if (distance < 0.5 && this.classList.contains(isOff);) {
+    if (distance < 0.5 && this.classList.contains(isOff)) {
       this.classList.remove("isOff");
       this.classList.add("isOn");
       this.el.emit('hover');
