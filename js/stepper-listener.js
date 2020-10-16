@@ -10,7 +10,7 @@ AFRAME.registerComponent('stepper-listener', {
 
 
 
-    cam.object3D.getWorldPosition(positionPlayer));
+    cam.object3D.getWorldPosition(positionPlayer);
     this.el.object3D.getWorldPosition(positionSelf);
 
     var distance = positionSelf.distanceTo( positionPlayer );
