@@ -1,10 +1,5 @@
 AFRAME.registerComponent('stepper-listener', {
 
-  init: function () {
-    var isOn = false;
-  }
-
-
   tick: function () {
 
     var cam = document.querySelector("#cam");
@@ -33,5 +28,7 @@ AFRAME.registerComponent('stepper-listener', {
       this.el.emit('leave');
       console.log(isOn);
     }
+
+    console.log(isOn);
   }
 });
