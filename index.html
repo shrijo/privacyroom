@@ -55,7 +55,25 @@
             </a-image>
           </a-cylinder>
 
-          <a-cylinder class="isOff" stepper-listener position="-5.75 0.1 4" data-trigger="post-1" height="0.2" radius="0.5" shadow="receive: true" material="color: #aaaaaa"
+          <a-cylinder class="isOff" stepper-listener position="-5.75 0.1 6" data-trigger="post-1" height="0.2" radius="0.5" shadow="receive: true" material="color: #aaaaaa"
+            animation="property: material.color; to: #00ff00; dur: 300; startEvents: hover;"
+            animation__leave="property: material.color; to: #aaaaaa; dur: 300; startEvents: leave;">
+            <a-image trigger-listener id="post-1" src="#post-1" position="1.5 2 0" height="2.89" width="2.75" rotation="0 -90 0" opacity="0"
+              animation="property: opacity; to: 1; dur: 300; startEvents: open;"
+              animation__close="property: opacity; to: ; dur: 300; startEvents: close;">
+            </a-image>
+          </a-cylinder>
+
+          <a-cylinder class="isOff" stepper-listener position="-5.75 0.1 12" data-trigger="post-1" height="0.2" radius="0.5" shadow="receive: true" material="color: #aaaaaa"
+            animation="property: material.color; to: #00ff00; dur: 300; startEvents: hover;"
+            animation__leave="property: material.color; to: #aaaaaa; dur: 300; startEvents: leave;">
+            <a-image trigger-listener id="post-1" src="#post-1" position="1.5 2 0" height="2.89" width="2.75" rotation="0 -90 0" opacity="0"
+              animation="property: opacity; to: 1; dur: 300; startEvents: open;"
+              animation__close="property: opacity; to: ; dur: 300; startEvents: close;">
+            </a-image>
+          </a-cylinder>
+
+          <a-cylinder class="isOff" stepper-listener position="-5.75 0.1 18" data-trigger="post-1" height="0.2" radius="0.5" shadow="receive: true" material="color: #aaaaaa"
             animation="property: material.color; to: #00ff00; dur: 300; startEvents: hover;"
             animation__leave="property: material.color; to: #aaaaaa; dur: 300; startEvents: leave;">
             <a-image trigger-listener id="post-1" src="#post-1" position="1.5 2 0" height="2.89" width="2.75" rotation="0 -90 0" opacity="0"
