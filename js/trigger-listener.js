@@ -6,7 +6,7 @@ AFRAME.registerComponent('trigger-listener', {
 
   tick: function () {
     if (this.parentNode.classList.contains('isOn')){
-      alert('hello')
+      alert('hello');
     }
   }
 });
