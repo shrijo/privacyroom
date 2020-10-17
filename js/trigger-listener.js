@@ -1,18 +1,31 @@
 AFRAME.registerComponent('trigger-listener', {
-  schema: {
-  },
 
-  init: function () {
-    var data = this.data;
-    var el = this.el;  // <a-box>
-    var defaultColor = el.getAttribute('material').color;
+  tick: function () {
 
-    el.addEventListener('hover', function () {
-      alert("hello")
-    });
+    var camera = document.querySelector("#cam");
+    var positionPlayer = new THREE.Vector3();
+    var positionSelf = new THREE.Vector3();
+    //var triggeredPost = this.el.dataset.trigger;
 
-    el.addEventListener('leave', function () {
-      alert("by")
-    });
+    var distance;
+
+    positionPlayer.setFromMatrixPosition(camera.object3D.matrixWorld);
+
+    this.parentNode.el.object3D.getWorldPosition(positionSelf);
+
+    var dx = positionPlayer.x - positionSelf.x;
+    var dy = positionPlayer.z - positionSelf.z;
+
+    var distance = Math.sqrt( dx * dx + dy * dy );
+
+    if (distance < 0.5 && this.el.classList.contains("isOff")) {
+      this.el.classList.replace("isOff", "isOn")
+      this.el.emit('hover');
+    }
+
+    else if (distance >= 0.5 && this.el.classList.contains("isOn")) {
+      this.el.classList.replace("isOn", "isOff")
+      this.el.emit('leave');
+    }
   }
 });
