@@ -5,12 +5,12 @@ AFRAME.registerComponent('trigger-listener', {
   },
 
   tick: function () {
-    if (parentIsOn == false && this.el.parentElement.classList.contains('isOn')){
-      var parentIsOn = true;
+    if (this.data.parentIsOn == false && this.el.parentElement.classList.contains('isOn')){
+      this.el.setAttribute('parentIsOn', true);
       alert('enter');
     }
-    else if (parentIsOn == true && this.el.parentElement.classList.contains('isOff')){
-      var parentIsOn = false;
+    else if (this.data.parentIsOn == true && this.el.parentElement.classList.contains('isOff')){
+      this.el.setAttribute('parentIsOn', false);
       alert('leave');
     }
     console.log(parentIsOn);
