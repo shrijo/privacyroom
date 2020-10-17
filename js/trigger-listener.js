@@ -5,11 +5,11 @@ AFRAME.registerComponent('trigger-listener', {
   },
 
   tick: function () {
-    if (parentIsOn == false && this.el.parentElement.classList.contains('isOn')){
+    if (parentIsOn = false && this.el.parentElement.classList.contains('isOn')){
       var parentIsOn = true;
       alert('enter');
     }
-    else if (parentIsOn == true && this.el.parentElement.classList.contains('isOff')){
+    else if (parentIsOn = true && this.el.parentElement.classList.contains('isOff')){
       var parentIsOn = false;
       alert('leave');
     }
