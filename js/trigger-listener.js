@@ -7,11 +7,11 @@ AFRAME.registerComponent('trigger-listener', {
   tick: function () {
     if (this.data.parentIsOn == false && this.el.parentElement.classList.contains('isOn')){
       this.data.parentIsOn = true;
-      alert('enter');
+      this.el.emit('hover');
     }
     else if (this.data.parentIsOn == true && this.el.parentElement.classList.contains('isOff')){
       this.data.parentIsOn = false;
-      alert('leave');
+      this.el.emit('leave');
     }
   }
 });
