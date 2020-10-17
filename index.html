@@ -5,6 +5,7 @@
     <title>Privacy Room</title>
     <meta name="description" content="Hello, World! - A-Frame">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-shaderfrog-component"></script>
     <script src="js/stepper-listener.js"></script>
     <script src="js/trigger-listener.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
@@ -41,7 +42,7 @@
 
       <a-entity class="room">
 
-          <a-box position="-10 4 12" scale="36 8 0.4" rotation="0 90 0" color="#4d4d4d" shadow="cast: true"></a-box>
+          <a-box position="-10 4 12" scale="36 8 0.4" rotation="0 90 0" shader-frog="name:Goo_Shader"></a-box>
           <a-box position="-7 4 -10" scale="6 8 0.4" rotation="0 0 0" color="#4d4d4d" shadow="cast: true"></a-box>
           <a-box position="-4 4 10" scale="40 8 0.4" rotation="0 90 0" color="#4d4d4d" shadow="cast: true"></a-box>
           <a-box position="-7 4 30" scale="6 8 0.4" rotation="0 0 0" color="#4d4d4d" shadow="cast: true"></a-box>
