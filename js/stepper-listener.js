@@ -18,14 +18,14 @@ AFRAME.registerComponent('stepper-listener', {
 
     var distance = Math.sqrt( dx * dx + dy * dy );
 
-    if (distance < 0.5 && this.el.classList.contains(isOff)) {
+    if (distance < 0.5 && this.el.classList.contains("isOff")) {
       this.classList.remove("isOff");
       this.classList.add("isOn");
       this.el.emit('hover');
       console.log(isOn);
     }
 
-    else if (distance >= 0.5 && this.el.classList.contains(isOn)) {
+    else if (distance >= 0.5 && this.el.classList.contains("isOn")) {
       this.classList.remove("isOn");
       this.classList.ad("isOff");
       this.el.emit('leave');
