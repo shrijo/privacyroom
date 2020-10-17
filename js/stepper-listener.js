@@ -5,7 +5,7 @@ AFRAME.registerComponent('stepper-listener', {
     var camera = document.querySelector("#cam");
     var positionPlayer = new THREE.Vector3();
     var positionSelf = new THREE.Vector3();
-    var triggeredPost = this.el.dataset.trigger;
+    //var triggeredPost = this.el.dataset.trigger;
 
     var distance;
 
@@ -21,13 +21,13 @@ AFRAME.registerComponent('stepper-listener', {
     if (distance < 0.5 && this.el.classList.contains("isOff")) {
       this.el.classList.replace("isOff", "isOn")
       this.el.emit('hover');
-      document.getElementById(triggeredPost).el.emit('hover');
+      //document.getElementById(triggeredPost).emit('hover');
     }
 
     else if (distance >= 0.5 && this.el.classList.contains("isOn")) {
       this.el.classList.replace("isOn", "isOff")
       this.el.emit('leave');
-      document.getElementById(triggeredPost).el.emit('leave');
+      //document.getElementById(triggeredPost).emit('leave');
     }
   }
 });
