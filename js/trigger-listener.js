@@ -5,8 +5,13 @@ AFRAME.registerComponent('trigger-listener', {
   },
 
   tick: function () {
-    if (this.el.parentElement.classList.contains('isOn')){
-      alert('hello');
+    if (parentIsOn == false && this.el.parentElement.classList.contains('isOn')){
+      parentIsOn = true;
+      this.el.emit('hover');
+    }
+    else if (parentIsOn == true && this.el.parentElement.classList.contains('isOff')){
+      parentIsOn = false;
+      this.el.emit('leave');
     }
   }
 });
