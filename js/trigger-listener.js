@@ -13,6 +13,5 @@ AFRAME.registerComponent('trigger-listener', {
       this.el.setAttribute('parentIsOn', false);
       alert('leave');
     }
-    console.log(parentIsOn);
   }
 });
