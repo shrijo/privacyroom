@@ -19,17 +19,13 @@ AFRAME.registerComponent('stepper-listener', {
     var distance = Math.sqrt( dx * dx + dy * dy );
 
     if (distance < 0.5 && this.el.classList.contains("isOff")) {
-      this.el.classList.remove("isOff");
-      this.el.classList.add("isOn");
+      this.el.classList.replace("isOff", "isOn")
       this.el.emit('hover');
-      console.log(isOn);
     }
 
     else if (distance >= 0.5 && this.el.classList.contains("isOn")) {
-      this.el.classList.remove("isOn");
-      this.el.classList.ad("isOff");
+      this.el.classList.replace("isOn", "isOff")
       this.el.emit('leave');
-      console.log(isOn);
     }
   }
 });
