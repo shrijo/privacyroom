@@ -5,7 +5,7 @@ AFRAME.registerComponent('stepper-listener', {
     var camera = document.querySelector("#cam");
     var positionPlayer = new THREE.Vector3();
     var positionSelf = new THREE.Vector3();
-    String triggeredPost = this.el.dataset.trigger;
+    var String triggeredPost = this.el.dataset.trigger;
 
     var post = document.getElementById(triggeredPost);
 
