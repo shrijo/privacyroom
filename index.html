@@ -50,10 +50,13 @@
             animation__leave="property: material.color; to: #aaaaaa; dur: 300; startEvents: leave;">
           </a-cylinder>
 
-          <a-image src="#post-1" position="-4.5 3 0" height="0" width="0" rotation="0 -90 0" opacity="0"
-            animation__width="property: width; to: 2.75; loop: true; dur: 300"
-            animation__height="property: height; to: 2.89; loop: true; dur: 300"
-            animation__opacity="property: opacity; to: 1; loop: true; dur: 300">
+          <a-image id="post-1" src="#post-1" position="-4.5 3 0" height="0" width="0" rotation="0 -90 0" opacity="0"
+            animation__hoverwidth="property: width; to: 2.75; loop: true; dur: 300 startEvents: hover;"
+            animation__hoverheight="property: height; to: 2.89; loop: true; dur: 300 startEvents: hover;"
+            animation__hoveropacity="property: opacity; to: 1; loop: true; dur: 300 startEvents: hover;"
+            animation__leavewidth="property: width; to: 0; loop: true; dur: 300 startEvents: leave;"
+            animation__leaveheight="property: height; to: 0; loop: true; dur: 300 startEvents: leave;"
+            animation__leaveopacity="property: opacity; to: 0; loop: true; dur: 300 startEvents: leave;">
           </a-image>
 
           <a-entity text-geometry="value: PRIVAT; height:0.2; font: #optimerBoldFont; size: 0.2" position="-7.2 4.65 -9.8" material="color: pink"></a-entity>

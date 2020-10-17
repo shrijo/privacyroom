@@ -7,11 +7,11 @@ AFRAME.registerComponent('stepper-listener', {
     var positionSelf = new THREE.Vector3();
     var triggeredPost = this.el.dataset.trigger;
 
+    var post = document.getElementById(triggeredPost);
+
     var distance;
 
     positionPlayer.setFromMatrixPosition(camera.object3D.matrixWorld);
-
-    console.log(triggeredPost);
 
     this.el.object3D.getWorldPosition(positionSelf);
 
@@ -23,11 +23,13 @@ AFRAME.registerComponent('stepper-listener', {
     if (distance < 0.5 && this.el.classList.contains("isOff")) {
       this.el.classList.replace("isOff", "isOn")
       this.el.emit('hover');
+      post.emit('hover');
     }
 
     else if (distance >= 0.5 && this.el.classList.contains("isOn")) {
       this.el.classList.replace("isOn", "isOff")
       this.el.emit('leave');
+      post.emit('leave');
     }
   }
 });
