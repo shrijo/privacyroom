@@ -11,7 +11,7 @@ AFRAME.registerComponent('trigger-listener', {
     }
     else if (this.data.parentIsOn == true && this.el.parentElement.classList.contains('isOff')){
       this.data.parentIsOn = false;
-      this.el.emit('leave');
+      this.el.emit('hide');
     }
   }
 });
