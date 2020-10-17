@@ -1,7 +1,7 @@
 AFRAME.registerComponent('trigger-listener', {
 
-  init: function () {
-    var parentIsOn = false;
+  schema: {
+    parentIsOn: {default: false}
   },
 
   tick: function () {
