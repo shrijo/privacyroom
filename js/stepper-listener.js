@@ -5,10 +5,13 @@ AFRAME.registerComponent('stepper-listener', {
     var camera = document.querySelector("#cam");
     var positionPlayer = new THREE.Vector3();
     var positionSelf = new THREE.Vector3();
+    var triggeredPost = this.el.data.trigger;
+
     var distance;
 
-    //cam.object3D.getWorldPosition(positionPlayer);
     positionPlayer.setFromMatrixPosition(camera.object3D.matrixWorld);
+
+    console.log(triggeredPost);
 
     this.el.object3D.getWorldPosition(positionSelf);
 
