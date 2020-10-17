@@ -3,14 +3,16 @@ AFRAME.registerComponent('trigger-listener', {
   },
 
   init: function () {
+    var data = this.data;
+    var el = this.el;  // <a-box>
     var defaultColor = el.getAttribute('material').color;
 
-    this.parentNode.addEventListener('hover', function () {
-      alert("enter");
+    el.addEventListener('hover', function () {
+      alert("hello")
     });
 
-    this.parentNode.addEventListener('leave', function () {
-      alert("leave");
+    el.addEventListener('leave', function () {
+      alert("by")
     });
   }
 });
