@@ -7,7 +7,7 @@ AFRAME.registerComponent('stepper-listener', {
     var positionSelf = new THREE.Vector3();
     var triggeredPost = this.el.dataset.trigger;
 
-    var post = String(document.getElementById(triggeredPost));
+    var post = document.getElementById(String(triggeredPost));
 
     var distance;
 
