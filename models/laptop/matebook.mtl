@@ -1,0 +1,40 @@
+# Blender MTL File: 'huawei matebook x pro 2019.blend'
+# Material Count: 3
+
+newmtl Material
+Ns 208.047162
+Ka 0.947020 0.947020 0.947020
+Kd 0.046665 0.042311 0.052861
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_BOTTOM_BaseColor.png
+map_Ns /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_BOTTOM_Roughness.png
+refl /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_BOTTOM_Metallic.png
+
+newmtl Material.003
+Ns 19.591508
+Ka 0.917647 0.917647 0.917647
+Kd 0.013682 0.000000 0.001679
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_KEYBOARD_BaseColor.png
+refl /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_KEYBOARD_Metallic.png
+
+newmtl Material.005
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.008568 0.022174 0.024158
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_Material.005_BaseColor.png
+map_Ns /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_Material.005_Roughness.png
+refl /Users/shrijo/Downloads/Huawei 2020LAPTOP/TexturesS/LOWPOLY_Material.005_Metallic.png
