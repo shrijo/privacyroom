@@ -50,10 +50,10 @@
 
       <a-entity class="room">
 
-          <a-box position="-10 4 12" scale="36 8 0.4" rotation="0 90 0" color="#dedede" shadow="cast: true"></a-box>
-          <a-box position="-7 4 -9.8" scale="6.4 8 0.4" rotation="0 0 0" color="#dedede" shadow="cast: true"></a-box>
-          <a-box position="-4 4 10" scale="40 8 0.4" rotation="0 90 0" color="#dedede" shadow="cast: true"></a-box>
-          <a-box position="-7 4 30" scale="6 8 0.4" rotation="0 0 0" color="#dedede" shadow="cast: true"></a-box>
+          <a-box position="-10 4 12" scale="36 8 0.4" rotation="0 90 0" color="#fafafa" shadow="cast: true"></a-box>
+          <a-box position="-7 4 -9.8" scale="6.4 8 0.4" rotation="0 0 0" color="#fafafa" shadow="cast: true"></a-box>
+          <a-box position="-4 4 10" scale="40 8 0.4" rotation="0 90 0" color="#fafafa" shadow="cast: true"></a-box>
+          <a-box position="-7 4 30" scale="6 8 0.4" rotation="0 0 0" color="#fafafa" shadow="cast: true"></a-box>
 
           <a-cylinder class="isOff" stepper-listener position="-5.75 0.1 0" data-trigger="post-1" height="0.2" radius="0.5" shadow="receive: true" material="color: #aaaaaa"
             animation="property: material.color; to: #00ff00; dur: 300; startEvents: hover;"
@@ -122,8 +122,10 @@
           <a-plane color="#ffffff" position="0 8 0" height="20" width="20" rotation="90 0 0" shader-frog="src:url(shaders/New_Composed_Shader.json)"></a-plane>
 
           <a-obj-model src="#laptop-obj" position="-5 0.25 0" rotation="0 90 0" scale="2 2 2" shadow="cast:true" material="color: #d4d4d4"></a-obj-model>
-          <a-video src="#googlefeed" width="6" height="4" position="-8.4 1.795 0" rotation="-25.45 90 0"></a-video>
+          <a-video src="#googlefeed" width="6.400" height="3.600" position="-8.692 2.246 0" scale="1.109 1.109 1.109" rotation="-25.45 90 0"></a-video>
           <a-obj-model src="#phone-obj" position="2 0.8 -8" rotation="0 0 0" scale="0.3 0.3 0.3" shadow="cast:true" material="color: #d4d4d4"></a-obj-model>
+
+          <a-entity light="type: point; castShadow:true; color: #FFF; distance: 20; intensity: 0.2" position="13 6 19.5"></a-entity>
 
       </a-entity>
 
