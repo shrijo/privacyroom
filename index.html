@@ -7,18 +7,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://rawgit.com/msj121/aframeFrogShaders/master/aframe-shader-frog.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
     <script src="js/stepper-listener.js"></script>
     <script src="js/trigger-listener.js"></script>
     <script src="js/video-handler-google.js"></script>
     <script src="js/video-handler-insta.js"></script>
     <script src="js/video-handler-pinterest.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
-    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
-    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
   </head>
   <body>
 
-    <a-scene inspector-plugin-recast renderer="antialias: true">
+    <a-scene renderer="antialias: true" inspector-plugin-recast>
 
       <a-assets>
         <img id="post-1" src="images/post1.png">
