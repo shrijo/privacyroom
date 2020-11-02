@@ -34,12 +34,10 @@
         <a-asset-item id="laptop-obj" src="models/laptop/matebook.obj"></a-asset-item>
         <a-asset-item id="phone-obj" src="models/phone/p10.obj"></a-asset-item>
 
-        <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
-
       </a-assets>
 
       <canvas class="a-canvas" data-aframe-canvas="true" width="1000" height="1000"></canvas>
-      <a-entity id="walkMesh" gltf-model="models/navmesh.gltf" class="navmesh" nav-mesh position="-7 0.01 10.25" scale="0.5 0.5 0.5"></a-entity>
+      <a-entity id="walkMesh" gltf-model="models/navmesh.gltf" class="navmesh" nav-mesh position="-7 0 10.25" scale="0.5 0.5 0.5"></a-entity>
 
       <a-entity id="rig" movement-controls="constrainToNavMesh: true;" position="-7 0 27">
         <a-entity id="cam" camera="active: true" rotation="0 0 0" position="0 1.6 0" look-controls>
